@@ -232,6 +232,7 @@ while getopts ":haistuz" option; do
 			zshSetup
 			i3Setup
 			sublimeSetup
+			;;
 		s) #Install sectools
 			secTools
 			;;
