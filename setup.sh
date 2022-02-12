@@ -94,9 +94,9 @@ secTools()
 						#sudo tar -xvf go1.15.7.linux-amd64.tar.gz
 						#sudo mv go /usr/local
 						sudo apt install -y golang
-						export GOROOT=/usr/local/go
-						export GOPATH=$HOME/go
-						export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+						export GOROOT="/usr/local/go"
+						export GOPATH="$HOME/go"
+						export PATH="$GOPATH/bin:$GOROOT/bin:$PATH"
 						echo 'export GOROOT=/usr/local/go' >> ~/.bash_profile
 						echo 'export GOPATH=$HOME/go'	>> ~/.bash_profile			
 						echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bash_profile	
@@ -106,8 +106,7 @@ secTools()
 						;;
 					no)
 						echo "Please install go and rerun this script"
-						echo "Aborting installation..."
-						exit 1
+						break
 						;;
 		esac	
 	done
