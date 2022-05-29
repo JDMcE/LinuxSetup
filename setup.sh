@@ -89,18 +89,17 @@ secTools()
 	        case $choice in
 	                yes)
 
-						echo "Installing Golang"
-						#wget https://golang.org/dl/go1.15.7.linux-amd64.tar.gz
-						#sudo tar -xvf go1.15.7.linux-amd64.tar.gz
-						#sudo mv go /usr/local
-						sudo apt install -y golang
-						export GOROOT=/usr/local/go
-						export GOPATH=$HOME/go
-						export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-						echo 'export GOROOT=/usr/local/go' >> ~/.bash_profile
-						echo 'export GOPATH=$HOME/go'	>> ~/.bash_profile			
-						echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bash_profile	
-						source ~/.bash_profile
+						echo "Installing Go"
+						wget https://go.dev/dl/go1.18.2.linux-amd64.tar.gz
+						sudo tar -xvf go1.18.2.linux-amd64.tar.gz
+						sudo mv go /usr/local
+						# export GOROOT=/usr/local/go
+						# export GOPATH=$HOME/go
+						# export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+						# echo 'export GOROOT=/usr/local/go' >> ~/.bash_profile
+						# echo 'export GOPATH=$HOME/go'	>> ~/.bash_profile			
+						# echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bash_profile	
+						# source ~/.bash_profile
 						sleep 1
 						break
 						;;
@@ -120,7 +119,7 @@ secTools()
 	cd ~/tools/
 
 	#install aquatone
-	go get github.com/michenriksen/aquatone
+	go install github.com/michenriksen/aquatone@latest
 
 
 	#JSparser
@@ -175,15 +174,15 @@ secTools()
 
 
 	#httprobe
-	go get -u github.com/tomnomnom/httprobe 
+	go get install github.com/tomnomnom/httprobe@latest 
 
 
 	#unfurl
-	go get -u github.com/tomnomnom/unfurl 
+	go get install github.com/tomnomnom/unfurl@latest
 
 
 	#waybackurls
-	go get github.com/tomnomnom/waybackurls
+	go get install github.com/tomnomnom/waybackurls@latest
 
 
 	#crtndstry
