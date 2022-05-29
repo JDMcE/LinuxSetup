@@ -88,8 +88,6 @@ secTools()
 	select choice in "${choices[@]}"; do
 	        case $choice in
 	                yes)
-
-<<<<<<< HEAD
 						echo "Installing Go"
 						wget https://go.dev/dl/go1.18.2.linux-amd64.tar.gz
 						sudo tar -xvf go1.18.2.linux-amd64.tar.gz
@@ -101,7 +99,6 @@ secTools()
 						# echo 'export GOPATH=$HOME/go'	>> ~/.bash_profile			
 						# echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bash_profile	
 						# source ~/.bash_profile
-=======
 						echo "Installing Golang"
 						#wget https://golang.org/dl/go1.15.7.linux-amd64.tar.gz
 						#sudo tar -xvf go1.15.7.linux-amd64.tar.gz
@@ -114,7 +111,6 @@ secTools()
 						echo 'export GOPATH=$HOME/go'	>> ~/.bash_profile			
 						echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bash_profile	
 						source ~/.bash_profile
->>>>>>> 7ac89bb7632bd6625a69c019fc23ab0934294b7a
 						sleep 1
 						break
 						;;
