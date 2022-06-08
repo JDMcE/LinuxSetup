@@ -169,18 +169,6 @@ secTools()
 	cd ~/tools/
 
 
-	#httprobe
-	go get install github.com/tomnomnom/httprobe@latest 
-
-
-	#unfurl
-	go get install github.com/tomnomnom/unfurl@latest
-
-
-	#waybackurls
-	go get install github.com/tomnomnom/waybackurls@latest
-
-
 	#crtndstry
 	git clone https://github.com/nahamsec/crtndstry.git
 
@@ -194,7 +182,6 @@ secTools()
 	cd ~/tools/
 
 
-
 	#PEAS Suite
 	cd ~/tools/
 	git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git
@@ -203,6 +190,26 @@ secTools()
 	#github-search
 	cd ~/tools/
 	git clone https://github.com/gwen001/github-search.git
+	
+	#Install go tools
+	
+	#httprobe
+	go install github.com/tomnomnom/httprobe@latest 
+
+	#unfurl
+	go install github.com/tomnomnom/unfurl@latest
+
+	#waybackurls
+	go install github.com/tomnomnom/waybackurls@latest
+	
+	#meg
+	go install github.com/tomnomnom/meg@latest
+	
+	#gf
+	go install github.com/tomnomnom/gf@latest
+	
+	#Create empty files for listings
+	touch httprobe unfurl waybackurls meg gf
 
 
 	echo -e "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
