@@ -43,6 +43,11 @@ zshSetup()
 	git clone https://github.com/JDMcE/Config-Files.git
 	cd Config-Files
 	mv .zshrc ~/.zshrc
+	
+	#Add plugins
+	cd ~/.oh-my-zsh/custom/plugins
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting
+	git clone https://github.com/zsh-users/zsh-autosuggestions
 }
 
 
