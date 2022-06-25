@@ -34,7 +34,7 @@ zshSetup()
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 	#Add config 	
-	cp $HOME/Config-Files/.zshrc $HOME/.zshrc 
+	ln -s $HOME/Config-Files/.zshrc $HOME/.zshrc 
 
 	#Add plugins
 	cd $HOME/.oh-my-zsh/custom/plugins
@@ -60,7 +60,7 @@ i3Setup()
 terminatorSetup()
 {
 	sudo apt install -y terminator
-	cp $HOME/Config-Files/Terminator/config $HOME/.config/terminator/config
+	ln -s $HOME/Config-Files/Terminator/config $HOME/.config/terminator/config
 }
 
 goInstall()
