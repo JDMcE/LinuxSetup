@@ -7,7 +7,6 @@ Usage: $(basename "${BASH_SOURCE[0]}") [-h|a|i|s|t|u|z]
 A script for installing things.
 	-h	Display usage
 	-a 	Install all
-	-i	Install i3-gaps
 	-s	Install Security tool (requires go)
 	-g	Install go
 	-t	Install Terminator
@@ -41,21 +40,6 @@ zshSetup()
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting
 	git clone https://github.com/zsh-users/zsh-autosuggestions
 }
-
-
-i3Setup()
-{
-	cd $HOME
-	sudo add-apt-repository ppa:regolith-linux/release
-	sudo apt update
-	sudo apt install -y i3-gaps
-
-	sudo apt install -y rofi nitrogen picom compton
-	
-	#Add config
-	cp $HOME/Config-Files/i3config/* $HOME/.config/*
-}
-
 
 terminatorSetup()
 {
@@ -200,7 +184,6 @@ while getopts ":haistuzg" option; do
 			secTools
 			terminatorSetup
 			zshSetup
-			i3Setup
 			sublimeSetup
 			;;
 		g) # Install go
@@ -214,9 +197,6 @@ while getopts ":haistuzg" option; do
 			;;
 		z) # Install ZSH
 			zshSetup
-			;;
-		i) # Install i3
-			i3Setup
 			;;
 		u) # Install Sublime text
 			sublimeSetup
